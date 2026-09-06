@@ -86,6 +86,7 @@
         modules = [
           configuration
           ./modules/darwin/homebrew.nix
+          ./modules/darwin/dev-runtimes.nix
           inputs.sops-nix.darwinModules.sops
            home-manager.darwinModules.home-manager
           ./modules/darwin/fonts.nix

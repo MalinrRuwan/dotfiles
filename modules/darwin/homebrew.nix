@@ -14,23 +14,26 @@
   homebrew = {
     enable = true;
 
+    # Homebrew 6+ refuses to load formulae/casks from untrusted third-party
+    # taps (HOMEBREW_REQUIRE_TAP_TRUST) — that aborts the whole switch.
+    # Official homebrew/* taps are always trusted; mark everything else.
     taps = [
-      "1jehuang/jcode"
-      "antoniorodr/memo"
-      "cirruslabs/cli"
-      "docker/tap"
-      "gromgit/fuse"
-      "heroku/brew"
+      { name = "1jehuang/jcode"; trusted = true; }
+      { name = "antoniorodr/memo"; trusted = true; }
+      { name = "cirruslabs/cli"; trusted = true; }
+      { name = "docker/tap"; trusted = true; }
+      { name = "gromgit/fuse"; trusted = true; }
+      { name = "heroku/brew"; trusted = true; }
       "homebrew/services"
-      "hudochenkov/sshpass"
-      "kilo-org/tap"
-      "mongodb/brew"
-      "osx-cross/avr"
-      "oven-sh/bun"
-      "steipete/tap"
-      "teamookla/speedtest"
-      "tw93/tap"
-      "amir1376/tap"
+      { name = "hudochenkov/sshpass"; trusted = true; }
+      { name = "kilo-org/tap"; trusted = true; }
+      { name = "mongodb/brew"; trusted = true; }
+      { name = "osx-cross/avr"; trusted = true; }
+      { name = "oven-sh/bun"; trusted = true; }
+      { name = "steipete/tap"; trusted = true; }
+      { name = "teamookla/speedtest"; trusted = true; }
+      { name = "tw93/tap"; trusted = true; }
+      { name = "amir1376/tap"; trusted = true; }
     ];
 
     brews = [
