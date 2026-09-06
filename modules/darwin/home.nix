@@ -39,6 +39,17 @@
         # Ghostty keeps its config outside ~/.config on macOS.
         "Library/Application Support/com.mitchellh.ghostty/config".source =
           ../../files/config/ghostty/config;
+
+        # Raycast preferences (plists only — databases/caches in
+        # ~/Library/Application Support/com.raycast.macos stay unmanaged).
+        # NOTE: macOS cfprefsd may replace these symlinks with regular files
+        # when you change settings in-app; next switch restores them.
+        "Library/Preferences/com.raycast.macos.plist".source =
+          ../../files/config/raycast/com.raycast.macos.plist;
+        "Library/Preferences/com.raycast.macos.v1.plist".source =
+          ../../files/config/raycast/com.raycast.macos.v1.plist;
+        "Library/Preferences/com.raycast-x.macos.plist".source =
+          ../../files/config/raycast/com.raycast-x.macos.plist;
       };
 
       # --- ~/.config/* (XDG) ---

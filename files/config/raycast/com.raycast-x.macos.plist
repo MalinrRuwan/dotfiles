@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSWindow Frame NSSpellCheckerSpellingPanel</key>
+	<string>414 356 431 289 0 0 1512 915 </string>
+	<key>NSWindow Frame NSSpellCheckerSubstitutionsPanel2</key>
+	<string>692 399 359 150 0 0 1512 915 </string>
+	<key>NSWindow Frame ai-chat-window</key>
+	<string>381 259 750 600 0 0 1512 915 </string>
+	<key>NSWindow Frame settings-window</key>
+	<string>356 119 800 786 0 0 1512 915 </string>
+	<key>NSWindow Frame welcome-window</key>
+	<string>157 139 1280 760 0 0 1512 915 </string>
+	<key>raycast_AnonymousId</key>
+	<string>05461382-39D8-4951-AB8C-9BCFB8A468DA</string>
+	<key>raycast_HasOpenedAIChat</key>
+	<true/>
+	<key>raycast_OnboardingCompleted</key>
+	<true/>
+	<key>raycast_ShowWindowsImmediately</key>
+	<false/>
+	<key>raycast_WelcomeTosAccepted</key>
+	<true/>
+	<key>raycast_WindowCacheMode_v2</key>
+	<string>auto</string>
+	<key>raycast_window_cachedPosition_ai</key>
+	<dict>
+		<key>1{1512, 945}</key>
+		<dict>
+			<key>x</key>
+			<real>381</real>
+			<key>y</key>
+			<real>859</real>
+		</dict>
+	</dict>
+	<key>raycast_window_cachedPosition_main</key>
+	<dict>
+		<key>1{1512, 945}</key>
+		<dict>
+			<key>x</key>
+			<real>381</real>
+			<key>y</key>
+			<real>612</real>
+		</dict>
+	</dict>
+	<key>raycast_window_cachedPosition_settings</key>
+	<dict>
+		<key>1{1512, 945}</key>
+		<dict>
+			<key>x</key>
+			<real>356</real>
+			<key>y</key>
+			<real>905</real>
+		</dict>
+	</dict>
+</dict>
+</plist>
