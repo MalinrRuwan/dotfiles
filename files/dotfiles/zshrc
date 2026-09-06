@@ -1,6 +1,6 @@
 
 export PATH="/Applications/Postgres.app/Contents/Versions/16/bin:${PATH}"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages:$PATH"
 
 #Starship
