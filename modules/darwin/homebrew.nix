@@ -24,7 +24,6 @@
       { name = "docker/tap"; trusted = true; }
       { name = "gromgit/fuse"; trusted = true; }
       { name = "heroku/brew"; trusted = true; }
-      "homebrew/services"
       { name = "hudochenkov/sshpass"; trusted = true; }
       { name = "kilo-org/tap"; trusted = true; }
       { name = "mongodb/brew"; trusted = true; }
@@ -64,7 +63,6 @@
       "maven"
       "mole"
       "mpv"
-      "neofetch"
       "neovim"
       "nmap"
       "node"
