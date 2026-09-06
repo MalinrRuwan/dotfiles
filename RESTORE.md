@@ -20,7 +20,19 @@ Tested on: Apple Silicon, macOS + Determinate Nix + nix-darwin.
 3. Set Computer Name to `Malins-MacBook-Pro` (System Settings → General → About). The flake enforces this anyway.
 4. `xcode-select --install` (gives you git).
 
-## Part 2 — Nix + first switch
+## Part 2 — One-script bootstrap (recommended)
+
+```bash
+export DOTFILES_PAT=<PAT-from-Part-0>
+curl -fsSL -H "Authorization: Bearer $DOTFILES_PAT" \
+  https://raw.githubusercontent.com/MalinrRuwan/dotfiles-new/main/bootstrap.sh -o /tmp/bootstrap.sh
+bash /tmp/bootstrap.sh
+```
+
+That installs (skipping what exists): Xcode CLT → Determinate Nix → Homebrew →
+clone to `/private/etc/nix-darwin` → first `switch`. Then continue at Part 3.
+
+## Part 2b — Manual bootstrap (fallback)
 
 ```bash
 # 1. Determinate Nix (required — this flake sets nix.enable = false)

@@ -30,6 +30,7 @@
       "steipete/tap"
       "teamookla/speedtest"
       "tw93/tap"
+      "amir1376/tap"
     ];
 
     brews = [
@@ -101,6 +102,8 @@
       "onedrive"
       "altserver"
       "maccy"
+      "cap"
+      "ab-download-manager"
     ];
 
     # Safe default: never uninstall anything you didn't declare yet.
