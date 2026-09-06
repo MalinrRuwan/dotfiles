@@ -83,6 +83,7 @@
 
     casks = [
       "basictex"
+      "fzf"
       "cloudflare-warp"
       "codex"
       "ghostty"

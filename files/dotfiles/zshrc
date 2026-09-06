@@ -29,3 +29,4 @@ export PATH="/Users/malindhamsara/.local/bin:$PATH"
 
 # kimi-code
 export PATH="/Users/malindhamsara/.kimi-code/bin:$PATH"
+source <(fzf --zsh)
