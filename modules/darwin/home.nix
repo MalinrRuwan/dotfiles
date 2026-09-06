@@ -22,7 +22,7 @@
     useUserPackages = true;
     backupFileExtension = "hm-backup";
 
-    users.malinruwanpathirana = {
+    users.malindhamsara = {
       home.stateVersion = "25.05";
       home.username = "malindhamsara";
       home.homeDirectory = "/Users/malindhamsara";
