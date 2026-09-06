@@ -1,0 +1,221 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "code_lens": "on",
+  "inlay_hints": {
+    "show_background": false,
+    "edit_debounce_ms": 200
+  },
+  "vim_mode": true,
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+    "anthropic_retention": true
+  },
+  "diff_view_style": "split",
+  "formatter": "language_server",
+  "format_on_save": "on",
+  "server_url": "https://zed.dev",
+  "soft_wrap": "editor_width",
+  "proxy": "",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        }
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "astro": "html"
+        },
+        "experimental": {
+          "classRegex": [
+            "class=\"([^\"]*)\"",
+            "class='([^']*)'",
+            "class:list=\"{([^}]*)}\"",
+            "class:list='{([^}]*)}'"
+          ]
+        }
+      }
+    }
+  },
+  "language_models": {
+    "openai_compatible": {},
+  },
+  "cli_default_open_behavior": "existing_window",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 400,
+    },
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "context_servers": {
+    "Anki": {
+      "enabled": true,
+      "url": "http://127.0.0.1:3141/",
+    },
+  },
+  "ui_font_family": ".SystemUIFont",
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "Monaspace Neon Var",
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "model": "poolside/laguna-s-2.1",
+      "api_url": "https://inference.poolside.ai/v1/chat/completions",
+    },
+    "mode": "subtle",
+    "provider": "mercury",
+  },
+  "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    },
+    "poolside": {
+      "type": "registry",
+    },
+    "Kimi Code CLI": {
+      "default_config_options": {
+        "model": "opencode-go/glm-5",
+      },
+      "favorite_config_option_values": {
+        "mode": [
+          "yolo"
+        ],
+      },
+      "type": "custom",
+      "command": "kimi",
+      "args": [
+        "acp"
+      ],
+      "env": {},
+    },
+    "Hermes": {
+      "type": "custom",
+      "command": "hermes",
+      "args": [
+        "acp"
+      ],
+    },
+    "opencode": {
+      "favorite_config_option_values": {
+        "mode": [
+          "build"
+        ],
+      },
+      "default_config_options": {
+        "effort": "high",
+        "mode": "build",
+        "model": "opencode-go/deepseek-v4-flash",
+      },
+      "type": "registry",
+    },
+  },
+  "agent": {
+    "play_sound_when_agent_done": "never",
+    "sandbox_permissions": {
+      "allow_unsandboxed": true,
+      "write_paths": [
+        {
+          "requested": "/Users/malinruwanpathirana/.agent-browser",
+          "resolved": "/Users/malinruwanpathirana/.agent-browser"
+        }
+      ],
+      "network_hosts": [
+        "developers.cloudflare.com"
+      ],
+    },
+    "terminal_init_command": "",
+    "thinking_display": "always_collapsed",
+    "default_profile": "write",
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "dock": "right",
+    "default_model": {
+      "effort": "xhigh",
+      "enable_thinking": true,
+      "provider": "zed.dev",
+      "model": "gpt-5.6-luna",
+    },
+    "model_parameters": [],
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+  "experimental.theme_overrides": {
+    "syntax": {
+      "keyword": {
+        "font_weight": 800,
+      },
+      "comment": {
+        "font_style": "italic",
+        "font_weight": 200,
+        "color": "#808080",
+      },
+      "function": {
+        "font_style": "italic",
+        "font_weight": 400,
+      },
+      "type": {
+        "font_weight": 100,
+      },
+      "punctuation.bracket": {
+        "font_weight": 100,
+      },
+      "string": {
+        "color": "#6A8759",
+      },
+    },
+  },
+}

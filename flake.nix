@@ -25,10 +25,10 @@
     #
     # See: https://nix-community.github.io/home-manager/
     #
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+     home-manager = {
+       url = "github:nix-community/home-manager";
+       inputs.nixpkgs.follows = "nixpkgs";
+     };
   };
 
   outputs =
@@ -37,7 +37,7 @@
       nix-darwin,
       nixpkgs,
       sops-nix,
-      # home-manager,
+       home-manager,
     }:
     let
       configuration =
@@ -74,8 +74,6 @@
           # Primary user (required by nix-darwin for homebrew, system.defaults, etc.)
           system.primaryUser = "malinruwanpathirana";
 
-          # Enable Homebrew management through nix-darwin
-          homebrew.enable = true;
 
           # Enable if you want to allow unfree packages (e.g. some fonts, or certain applications). Leave false to avoid them entirely.
           # nixpkgs.config.allowUnfree = true;
@@ -87,9 +85,9 @@
       darwinConfigurations."Malins-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          ./.nixmac
+          ./modules/darwin/homebrew.nix
           inputs.sops-nix.darwinModules.sops
-          # home-manager.darwinModules.home-manager
+           home-manager.darwinModules.home-manager
           ./modules/darwin/fonts.nix
           ./modules/darwin/defaults.nix
           ./modules/darwin/home.nix
@@ -102,7 +100,9 @@
           ./modules/darwin/sops-secrets.nix
           ./modules/darwin/users.nix
           ./nix-overlays.nix
-        ];
+        
+          ./modules/darwin/system-defaults.nix
+];
       };
     };
 }
