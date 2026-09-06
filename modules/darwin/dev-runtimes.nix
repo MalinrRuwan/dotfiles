@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  userHome = "/Users/malinruwanpathirana";
+  userHome = "/Users/malindhamsara";
 in
 {
   # Dev runtimes + their global packages.
@@ -20,7 +20,7 @@ in
   # resolves. Tool *selection* (which npm/cargo) stays pinned via absolute
   # paths below, independent of PATH order.
   # Everything is guarded: a green switch re-run is a fast no-op.
-  home-manager.users.malinruwanpathirana.home.activation = {
+  home-manager.users.malindhamsara.home.activation = {
     devRuntimes = {
       after = [ "writeBoundary" ];
       before = [ ];

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fresh-Mac bootstrap for dotfiles-new (nix-darwin + home-manager + homebrew).
 #
-# Usage (fresh macOS, Setup Assistant done, user `malinruwanpathirana`):
+# Usage (fresh macOS, Setup Assistant done, user `malindhamsara`):
 #   export DOTFILES_PAT=<github-fine-grained-PAT-with-contents-read>
 #   curl -fsSL -H "Authorization: Bearer $DOTFILES_PAT" \
 #     https://raw.githubusercontent.com/MalinrRuwan/dotfiles-new/main/bootstrap.sh -o /tmp/bootstrap.sh
@@ -13,7 +13,7 @@ set -euo pipefail
 REPO_URL="github.com/MalinrRuwan/dotfiles-new.git"
 TARGET_DIR="/private/etc/nix-darwin"
 FLAKE_REF=".#Malins-MacBook-Pro"
-EXPECTED_USER="malinruwanpathirana"
+EXPECTED_USER="malindhamsara"
 
 log()  { printf '\033[1;32m==>\033[0m %s\n' "$*"; }
 warn() { printf '\033[1;33mwarn:\033[0m %s\n' "$*"; }

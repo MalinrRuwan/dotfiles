@@ -8,24 +8,24 @@ export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
 # bun completions
-[ -s "/Users/malinruwanpathirana/.bun/_bun" ] && source "/Users/malinruwanpathirana/.bun/_bun"
+[ -s "/Users/malindhamsara/.bun/_bun" ] && source "/Users/malindhamsara/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Added by Antigravity
-export PATH="/Users/malinruwanpathirana/.antigravity/antigravity/bin:$PATH"
+export PATH="/Users/malindhamsara/.antigravity/antigravity/bin:$PATH"
 
 export COLORTERM=truecolor
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/malinruwanpathirana/.lmstudio/bin"
+export PATH="$PATH:/Users/malindhamsara/.lmstudio/bin"
 # End of LM Studio CLI section
 
 
 
 # Added by Antigravity CLI installer
-export PATH="/Users/malinruwanpathirana/.local/bin:$PATH"
-export PATH="/Users/malinruwanpathirana/.local/bin:$PATH"
+export PATH="/Users/malindhamsara/.local/bin:$PATH"
+export PATH="/Users/malindhamsara/.local/bin:$PATH"
 
 # kimi-code
-export PATH="/Users/malinruwanpathirana/.kimi-code/bin:$PATH"
+export PATH="/Users/malindhamsara/.kimi-code/bin:$PATH"

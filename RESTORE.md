@@ -16,7 +16,7 @@ Tested on: Apple Silicon, macOS + Determinate Nix + nix-darwin.
 ## Part 1 — Fresh macOS
 
 1. Erase All Content and Settings → go through Setup Assistant.
-2. Create user **`malinruwanpathirana`** (must match `system.primaryUser` in `flake.nix`).
+2. Create user **`malindhamsara`** (must match `system.primaryUser` in `flake.nix`).
 3. Set Computer Name to `Malins-MacBook-Pro` (System Settings → General → About). The flake enforces this anyway.
 4. `xcode-select --install` (gives you git).
 

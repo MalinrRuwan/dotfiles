@@ -19,8 +19,8 @@
   #   why the account exists and any required post-creation steps.
   # - Do not include plaintext passwords in the Nix configuration.
   #
-  users.users.malinruwanpathirana = {
-    home = "/Users/malinruwanpathirana";
+  users.users.malindhamsara = {
+    home = "/Users/malindhamsara";
   };
 
   # Sudo configuration (nix-darwin exposes `security.sudo`):

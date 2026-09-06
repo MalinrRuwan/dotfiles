@@ -163,8 +163,8 @@
       "allow_unsandboxed": true,
       "write_paths": [
         {
-          "requested": "/Users/malinruwanpathirana/.agent-browser",
-          "resolved": "/Users/malinruwanpathirana/.agent-browser"
+          "requested": "/Users/malindhamsara/.agent-browser",
+          "resolved": "/Users/malindhamsara/.agent-browser"
         }
       ],
       "network_hosts": [

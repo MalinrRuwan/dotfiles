@@ -101,11 +101,11 @@
 	<true/>
 	<key>onboarding_showTasksProgress</key>
 	<true/>
-	<key>permissions.folders.read:/Users/malinruwanpathirana/Desktop</key>
+	<key>permissions.folders.read:/Users/malindhamsara/Desktop</key>
 	<true/>
-	<key>permissions.folders.read:/Users/malinruwanpathirana/Documents</key>
+	<key>permissions.folders.read:/Users/malindhamsara/Documents</key>
 	<true/>
-	<key>permissions.folders.read:/Users/malinruwanpathirana/Downloads</key>
+	<key>permissions.folders.read:/Users/malindhamsara/Downloads</key>
 	<true/>
 	<key>permissions.folders.read:cloudStorage</key>
 	<true/>
