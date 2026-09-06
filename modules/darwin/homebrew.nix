@@ -77,6 +77,7 @@
       "uv"
       "wasmtime"
       "wget"
+      "hermes-agent"
     ];
 
     casks = [
@@ -86,6 +87,20 @@
       "ghostty"
       "openvpn-connect"
       "raycast"
+      "termius"
+      "google-chrome"
+      "figma"
+      "anki"
+      "spotify"
+      "zed"
+      "linear"
+      "notion"
+      "notion-calendar"
+      "obsidian"
+      "google-drive"
+      "onedrive"
+      "altserver"
+      "maccy"
     ];
 
     # Safe default: never uninstall anything you didn't declare yet.
