@@ -1,45 +1,30 @@
-{ ... }:
+{ pkgs, ... }:
 
 let
   userHome = "/Users/malindhamsara";
 in
 {
   # Dev runtimes + their global packages.
-  #
-  # Design notes (learned the hard way):
-  #   - node comes from homebrew.brews, but npm's prefix here is ~/.local
-  #     (standalone-node era). Checks use explicit binary paths, so they work
-  #     with either prefix and never flip between them.
-  #   - bun and rustup are standalone installers (self-updating toolchains,
-  #     pinned nightlies). A brew duplicate would shadow/fight them.
-  # PATH handling: activation runs in one shared shell and every export
-  # re-hashes command lookup. Prepending shadowed nix's GNU tools/bash with
-  # macOS BSD ones and aborted home-manager's own linkGeneration (readlink -e,
-  # find -printf, [[ -v ]]). So my dirs go LAST (append): system resolution
-  # stays identical to a stock switch, while npm's `env node` shebang still
-  # resolves. Tool *selection* (which npm/cargo) stays pinned via absolute
-  # paths below, independent of PATH order.
-  # Everything is guarded: a green switch re-run is a fast no-op.
   home-manager.users.malindhamsara.home.activation = {
     devRuntimes = {
       after = [ "writeBoundary" ];
       before = [ ];
       data = ''
-        export PATH="$PATH:${userHome}/.local/bin:${userHome}/.bun/bin:${userHome}/.cargo/bin:/opt/homebrew/bin"
+        export PATH="$PATH:${userHome}/.local/bin:${userHome}/.bun/bin:${userHome}/.cargo/bin:/opt/homebrew/bin:/usr/bin:/bin"
         BUN_BIN="${userHome}/.bun/bin/bun"
         RUSTUP_BIN="${userHome}/.cargo/bin/rustup"
 
         # --- bun (standalone, ~/.bun) ---
         if [ ! -x "$BUN_BIN" ]; then
           echo "installing bun..."
-          /usr/bin/curl -fsSL https://bun.sh/install | bash
+          PATH="/usr/bin:/bin:$PATH" /usr/bin/curl -fsSL https://bun.sh/install | /bin/bash
         fi
 
         # --- rustup (standalone, ~/.rustup + ~/.cargo) ---
         if [ ! -x "$RUSTUP_BIN" ]; then
           echo "installing rustup..."
           /usr/bin/curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
-            | sh -s -- -y --default-toolchain stable --profile default
+            | /bin/sh -s -- -y --default-toolchain stable --profile default
         fi
         for tc in nightly 1.85 1.88 nightly-2026-07-05; do
           if ! "$RUSTUP_BIN" toolchain list 2>/dev/null | grep -q "^$tc-aarch64-apple-darwin"; then
@@ -54,7 +39,7 @@ in
       after = [ "devRuntimes" ];
       before = [ ];
       data = ''
-        export PATH="$PATH:${userHome}/.local/bin:${userHome}/.bun/bin:${userHome}/.cargo/bin:/opt/homebrew/bin"
+        export PATH="$PATH:${userHome}/.local/bin:${userHome}/.bun/bin:${userHome}/.cargo/bin:/opt/homebrew/bin:/usr/bin:/bin"
         NPM=""
         if [ -x "${userHome}/.local/bin/npm" ]; then
           NPM="${userHome}/.local/bin/npm"
@@ -112,9 +97,6 @@ in
               "$CARGO_BIN" install "$crate"
             fi
           done
-          # NOTE: mdbook-trpl was installed via `cargo install --path` from a local
-          # repo (~/Documents/repos/rust_book) that no longer exists — excluded
-          # until that repo is back.
         else
           echo "devGlobals: cargo not found, skipping cargo globals"
         fi
