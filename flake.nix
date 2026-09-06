@@ -72,7 +72,7 @@
           nix.enable = false; # Disable nix-darwin’s Nix management
 
           # Primary user (required by nix-darwin for homebrew, system.defaults, etc.)
-          system.primaryUser = "malinruwanpathirana";
+          system.primaryUser = "malindhamsara";
 
 
           # Enable if you want to allow unfree packages (e.g. some fonts, or certain applications). Leave false to avoid them entirely.

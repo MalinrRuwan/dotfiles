@@ -24,8 +24,8 @@
 
     users.malinruwanpathirana = {
       home.stateVersion = "25.05";
-      home.username = "malinruwanpathirana";
-      home.homeDirectory = "/Users/malinruwanpathirana";
+      home.username = "malindhamsara";
+      home.homeDirectory = "/Users/malindhamsara";
 
       programs.home-manager.enable = true;
 
