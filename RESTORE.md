@@ -27,12 +27,17 @@ Tested on: Apple Silicon, macOS + Determinate Nix + nix-darwin.
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 # open a NEW terminal after install
 
-# 2. Clone (private repo — use the PAT from Part 0)
+# 2. Install Homebrew yourself — nix-darwin does NOT do this.
+#    Its homebrew module only runs `brew bundle`; if brew is missing it
+#    prints "Homebrew is not installed, skipping..." and moves on.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 3. Clone (private repo — use the PAT from Part 0)
 sudo git clone https://<PAT>@github.com/MalinrRuwan/dotfiles-new.git /private/etc/nix-darwin
 sudo chown -R $(whoami):staff /private/etc/nix-darwin
 cd /private/etc/nix-darwin
 
-# 3. Bootstrap nix-darwin, then switch (downloads GBs: texlive, basictex, flutter… be on power + wifi)
+# 4. Bootstrap nix-darwin, then switch (downloads GBs: texlive, basictex, flutter… be on power + wifi)
 nix run nix-darwin -- switch --flake .#Malins-MacBook-Pro
 sudo darwin-rebuild switch --flake .#Malins-MacBook-Pro
 ```
