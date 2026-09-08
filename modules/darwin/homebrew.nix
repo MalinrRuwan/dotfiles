@@ -79,11 +79,11 @@
       "wasmtime"
       "wget"
       "hermes-agent"
+      "fzf"
     ];
 
     casks = [
       "basictex"
-      "fzf"
       "cloudflare-warp"
       "codex"
       "ghostty"
