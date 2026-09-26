@@ -72,7 +72,10 @@
       "speedtest-cli"
       "starship"
       "summarize"
-      "tart"
+      # "tart" — unmanaged: cirruslabs/cli's tart.rb uses `depends_on :macos`
+      # in a form current Homebrew refuses to load, which makes `brew bundle`
+      # exit 1 and abort the whole activation. Stays installed; re-add when
+      # upstream fixes the tap.
       "tesseract"
       "tmux"
       "uv"
